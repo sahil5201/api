@@ -1,15 +1,10 @@
 const express = require('express')
 const app = express()
 const admin = require("firebase-admin");
-const con = require('./db')
 
-app.get('/api', function (req, res) {
-  res.send("HII");
-})
+//route
+const TaskRoute = require("./api/routes/task")
 
-app.get('' , function (req, res) {
-    res.send("Node API");
-})
+app.use("/Task",TaskRoute);
 
-console.log(con);
 module.exports = app 
