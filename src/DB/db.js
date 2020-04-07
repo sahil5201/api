@@ -1,12 +1,7 @@
-var mysql      = require('mysql');
-
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'todo'
+const admin = require('firebase-admin');
+let serviceAccount = require('../key/serviceAccountKey.json');
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
 });
- 
-connection.connect();
-
-module.exports = connection;
+let db = admin.firestore();
+module.exports = db;
