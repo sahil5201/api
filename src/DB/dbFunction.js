@@ -7,7 +7,7 @@ class dbfunction {
       .then((snapshot) => {
         let Data = [];
         snapshot.forEach((doc) => {
-          Data.push({ id: doc.id, info: doc.data() });
+          Data.push({ id: doc.id, task: doc.data() });
         });
         res.send(Data);
       })
