@@ -5,6 +5,7 @@ var bodyParser = require('body-parser')
 
 //route
 const TaskRoute = require("./api/routes/task")
+const ScheduleRoute = require("./api/routes/schedule")
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -18,5 +19,6 @@ app.use(bodyParser.json())
 
 
 app.use("/Task",TaskRoute);
+app.use("/Schedule",ScheduleRoute);
 
 module.exports = app 
