@@ -10,8 +10,6 @@ class TaskModel {
                 Date: Date.now()
             }
         );
-        console.log(BodyData, Data[0]);
-
         dbFunction.DB_addData("Task", Data[0]);
     }
 }

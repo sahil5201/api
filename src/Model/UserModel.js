@@ -1,8 +1,8 @@
 const DB = require("../DB/db");
 const dbFunction = require("../DB/dbFunction");
 
-class ScheduleModel {
-    ScheduleModel(BodyData) {
+class UserModel {
+    UserModel(BodyData) {
         let Data = [];
         Data.push(
             {
@@ -17,4 +17,4 @@ class ScheduleModel {
     }
 }
 
-module.exports = new ScheduleModel();
+module.exports = new UserModel();
