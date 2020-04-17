@@ -9,12 +9,14 @@ class ScheduleModel {
                 Task: BodyData.Task,
                 startDate: BodyData.startDate ? BodyData.startDate : Date.now(),
                 endDate: BodyData.endDate ? BodyData.endDate : Date.now(),
-                color: BodyData.color
+                color: BodyData.color,
+                userId: BodyData.userID,
             }
         );
-        
         dbFunction.DB_addData("ScheduleTask", Data[0]);
     }
+
+    
 }
 
 module.exports = new ScheduleModel();

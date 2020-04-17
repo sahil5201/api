@@ -7,6 +7,7 @@ class TaskModel {
         Data.push(
             {
                 Task: BodyData.Task,
+                userId: BodyData.userID,
                 Date: Date.now()
             }
         );
